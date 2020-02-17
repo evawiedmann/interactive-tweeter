@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from './Navbar';
 import Profile from './Profile';
 import Bio from './Bio';
-import NewTweet from './NewTweet';
+import FeedController from './FeedController';
 
 
 function App(){
@@ -18,7 +18,7 @@ function App(){
       <Profile/>
       <Bio/>
       </div>
-      <NewTweet/>
+      <FeedController/>
     </div>
   );
 }

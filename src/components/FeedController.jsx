@@ -1,6 +1,7 @@
 import React from "react";
 import NewTweet from "./NewTweet"
-class FeedController extends React.Component(){
+import Tweets from "./Tweets"
+class FeedController extends React.Component{
 
   constructor(props) {
     super(props);
@@ -8,18 +9,21 @@ class FeedController extends React.Component(){
       masterTweets: []
     };
     this.addNewTweetToList = this.addNewTweetToList.bind(this);
+  }
     addNewTweetToList(tweet){
       var newMasterTweets = this.state.masterTweets.slice();
           newMasterTweets.push(tweet);
           this.setState({masterTweets: newMasterTweets});
-    }
   }
 render(){
 
   return(
     <div>
-
-      <NewTweet test={"test"}/>
+      {this.state.masterTweets.map((tweet, index) =>
+      <Tweets content={tweet.content}
+          key={index}/>
+        )}
+      <NewTweet onNewTweetCreation={this.addNewTweetToList}/>
     </div>
   );
 }
