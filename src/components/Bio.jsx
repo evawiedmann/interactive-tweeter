@@ -2,8 +2,8 @@ import React from 'react';
 
 function Bio(){
   let bioSquare= {
-    height: '500',
-    width:  '400',
+    height: '500px',
+    width:  '400px',
     marginTop: '50px',
     border: "1px solid lightgray",
   }

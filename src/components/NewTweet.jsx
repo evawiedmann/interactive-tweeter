@@ -1,7 +1,17 @@
 import React from 'react';
 
-function Feed() {
+function NewTweet(props){
+  let _tweet = null;
+
+  function postTweet(event){
+    console.log(props);
+    event.preventDefault();
+    props.onNewTweetCreation({tweet: _tweet.value})
+    console.log(_tweet.value);
+
+  }
   let post = {
+
     height: "70px",
     width: "380px",
     border: "1px solid lightgrey",
@@ -100,56 +110,24 @@ let userContent = {
     <div>
     <div style={post}>
       <div style={happening}>
-        <span>What's Happening?</span>
-      </div>
-      <div style = {maroon}>
-      </div>
-    </div>
-    <div style={user1}>
-      <div style={image}></div>
-      <div style={userContent}>
-      <span style={userName}>IAJSD</span>
-      <br></br>
-      <span>Nunc gravida mi non neque consectetur, non molestie magna congue</span>
-      </div>
-    </div>
-    <div style={user2}>
-      <div style={image}></div>
-      <div style={userContent}>
-      <span style={userName}>IAJSD</span>
-      <br></br>
-      <span>Nunc gravida mi non neque consectetur, non molestie magna congue</span>
-      </div>
-    </div>
-    <div style={user3}>
-      <div style={image}></div>
-      <div style={userContent}>
-      <span style={userName}>IAJSD</span>
-      <br></br>
-      <span>Nunc gravida mi non neque consectetur, non molestie magna congue</span>
-      </div>
-    </div>
-    <div style={user4}>
-      <div style={image}></div>
-      <div style={userContent}>
-      <span style={userName}>IAJSD</span>
-      <br></br>
-      <span>Nunc gravida mi non neque consectetur, non molestie magna congue</span>
-      </div>
-    </div>
-    <div style={user5}>
-      <div style={image}></div>
-      <div style={userContent}>
-      <span style={userName}>IAJSD</span>
-      <br></br>
-      <span>Nunc gravida mi non neque consectetur, non molestie magna congue</span>
-      </div>
-    </div>
-    <div style={user6}>
+      <form onSubmit={postTweet}>
+        <input
+          type='text'
+          id='tweet'
+          placeholder="What's Happening"
+          ref={(input) => {_tweet = input;}}/>
 
+          <button type='submit'>Tweet</button>
+          </form>
+      </div>
+      <div  style = {maroon}>
+      </div>
     </div>
+
+
     </div>
   );
 }
 
-export default Feed;
+
+export default NewTweet;

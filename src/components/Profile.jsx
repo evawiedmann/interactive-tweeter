@@ -28,13 +28,13 @@ function Profile(){
     float: 'right',
     marginRight: '20%',
     marginTop: '20%',
-    fontSize: '18',
+    fontSize: '18px',
 
   }
 
   let tweetsFollowingFololowers = {
     padding: '10px',
-    fontSize: '14',
+    fontSize: '14px',
     marginLeft: '25px',
     marginTop: "100px",
 
