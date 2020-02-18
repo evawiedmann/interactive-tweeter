@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 function Navbar() {
 
@@ -7,9 +7,9 @@ function Navbar() {
     fontSize: '20px',
     border: '1px solid lightgrey',
     padding: '5px',
-    paddingRight: "5px",
+    paddingRight: '5px',
     // marginTop: '10px',
-  };
+  }
 
 
 
@@ -25,7 +25,7 @@ function Navbar() {
     paddingRight: '80px',
     marginRight: '10px',
     marginTop: '-5px',
-  };
+  }
 
   let searchItems = {
     color: 'gray',
@@ -38,11 +38,11 @@ function Navbar() {
     padding: '4px',
     textAlign: 'center',
     marginTop: '-5px',
-  };
+  }
 
-let navbar = {
-  marginTop: '25px',
-}
+  let navbar = {
+    marginTop: '25px',
+  }
 
   let hrBar = {
     margin: '25px 0',
@@ -50,19 +50,18 @@ let navbar = {
 
   return (
     <div>
+      <div style={navbar}>
+        <span style={mainItems}> Home </span>
+        <span style={mainItems}> Notifications </span>
+        <span style={mainItems}> Messages </span>
 
-    <div style={navbar}>
-    <span style={mainItems}> Home </span>
-    <span style={mainItems}> Notifications </span>
-    <span style={mainItems}> Messages </span>
+        <span style={searchItems}> Tweet </span>
+        <span style={searchBar}> Search </span>
 
-    <span style={searchItems}> Tweet </span>
-    <span style={searchBar}> Search </span>
-
+      </div>
+      <hr style={hrBar}/>
     </div>
-    <hr style={hrBar}/>
-    </div>
-  );
+  )
 }
 
-export default Navbar;
+export default Navbar

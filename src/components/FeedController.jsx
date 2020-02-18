@@ -1,35 +1,35 @@
-import React from "react";
-import NewTweet from "./NewTweet"
-import Tweets from "./Tweets"
+import React from 'react'
+import NewTweet from './NewTweet'
+import Tweets from './Tweets'
 class FeedController extends React.Component{
 
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       masterTweets: []
-    };
-    this.addNewTweetToList = this.addNewTweetToList.bind(this);
+    }
+    this.addNewTweetToList = this.addNewTweetToList.bind(this)
   }
-    addNewTweetToList(tweet){
-      var newMasterTweets = this.state.masterTweets.slice();
-          newMasterTweets.push(tweet);
-          this.setState({masterTweets: newMasterTweets});
+  addNewTweetToList(tweet){
+    var newMasterTweets = this.state.masterTweets.slice()
+    newMasterTweets.push(tweet)
+    this.setState({masterTweets: newMasterTweets})
   }
 
 
-render(){
+  render(){
 
-  return(
-    <div>
-    <NewTweet onNewTweetCreation={this.addNewTweetToList}/>
-      {this.state.masterTweets.map((tweet, index) =>
-      <Tweets content={tweet.tweet}
-              likes={0}
-              key={index}/>
-            )}
-    </div>
-  );
-}
+    return(
+      <div>
+        <NewTweet onNewTweetCreation={this.addNewTweetToList}/>
+        {this.state.masterTweets.map((tweet, index) =>
+          <Tweets content={tweet.tweet}
+            likes={0}
+            key={index}/>
+        )}
+      </div>
+    )
+  }
 }
 
-export default FeedController;
+export default FeedController

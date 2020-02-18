@@ -1,18 +1,18 @@
-import React from "react";
+import React from 'react'
 
 function Profile(){
   let profileTop = {
-    height: "180px",
-    width: "400px",
-    border: "1px solid lightgrey",
-    backgroundColor: "#4287f5",
+    height: '180px',
+    width: '400px',
+    border: '1px solid lightgrey',
+    backgroundColor: '#4287f5',
     position: 'absolute',
     zIndex: '-1'
   }
   let profileBottom = {
-    height: "180px",
-    width: "400px",
-    border: "1px solid lightgrey",
+    height: '180px',
+    width: '400px',
+    border: '1px solid lightgrey',
     paddingTop: '100px',
 
   }
@@ -36,7 +36,7 @@ function Profile(){
     padding: '10px',
     fontSize: '14px',
     marginLeft: '25px',
-    marginTop: "100px",
+    marginTop: '100px',
 
   }
 
@@ -53,14 +53,14 @@ function Profile(){
         <span style={image}><img width="100" height="100"src="https://www.royalsmushicafe.dk/wp-content/uploads/2016/02/Profile-Placeholder.jpg"></img></span>
         <span style={name}><strong>Kelly A. Corrigan</strong></span>
         <div style={links}>
-        <span style={tweetsFollowingFololowers}>TWEETS</span>
-        <span style={tweetsFollowingFololowers}>FOLLOWING</span>
-        <span style={tweetsFollowingFololowers}>FOLOLOWERS</span>
-      </div>
+          <span style={tweetsFollowingFololowers}>TWEETS</span>
+          <span style={tweetsFollowingFololowers}>FOLLOWING</span>
+          <span style={tweetsFollowingFololowers}>FOLOLOWERS</span>
+        </div>
       </div>
 
     </div>
-  );
+  )
 }
 
-export default Profile;
+export default Profile

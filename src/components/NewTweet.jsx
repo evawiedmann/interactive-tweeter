@@ -1,18 +1,18 @@
-import React from 'react';
+import React from 'react'
 
 function NewTweet(props){
-  let _tweet = null;
+  let _tweet = null
 
   function postTweet(event){
-    event.preventDefault();
+    event.preventDefault()
     props.onNewTweetCreation({tweet: _tweet.value})
     _tweet.value = ''
   }
   let post = {
 
-    height: "70px",
-    width: "380px",
-    border: "1px solid lightgrey",
+    height: '70px',
+    width: '380px',
+    border: '1px solid lightgrey',
     marginLeft: '425px',
     backgroundColor: 'lightblue',
     paddingRight: '20px',
@@ -44,26 +44,26 @@ function NewTweet(props){
 
   return (
     <div>
-    <div style={post}>
-      <div style={happening}>
-      <form onSubmit={postTweet}>
-        <input
-          type='text'
-          id='tweet'
-          placeholder="What's Happening"
-          ref={(input) => {_tweet = input;}}/>
+      <div style={post}>
+        <div style={happening}>
+          <form onSubmit={postTweet}>
+            <input
+              type='text'
+              id='tweet'
+              placeholder="What's Happening"
+              ref={(input) => {_tweet = input}}/>
 
-          <button type='submit'>Tweet</button>
+            <button type='submit'>Tweet</button>
           </form>
+        </div>
+        <div  style = {maroon}>
+        </div>
       </div>
-      <div  style = {maroon}>
-      </div>
-    </div>
 
 
     </div>
-  );
+  )
 }
 
 
-export default NewTweet;
+export default NewTweet

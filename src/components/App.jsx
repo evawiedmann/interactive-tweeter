@@ -1,8 +1,8 @@
-import React from 'react';
-import Navbar from './Navbar';
-import Profile from './Profile';
-import Bio from './Bio';
-import FeedController from './FeedController';
+import React from 'react'
+import Navbar from './Navbar'
+import Profile from './Profile'
+import Bio from './Bio'
+import FeedController from './FeedController'
 
 
 function App(){
@@ -15,12 +15,12 @@ function App(){
     <div>
       <Navbar/>
       <div style={content}>
-      <Profile/>
-      <Bio/>
+        <Profile/>
+        <Bio/>
       </div>
       <FeedController/>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
