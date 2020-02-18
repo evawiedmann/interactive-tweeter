@@ -15,15 +15,18 @@ class FeedController extends React.Component{
           newMasterTweets.push(tweet);
           this.setState({masterTweets: newMasterTweets});
   }
+
+
 render(){
 
   return(
     <div>
+    <NewTweet onNewTweetCreation={this.addNewTweetToList}/>
       {this.state.masterTweets.map((tweet, index) =>
-      <Tweets content={tweet.content}
-          key={index}/>
-        )}
-      <NewTweet onNewTweetCreation={this.addNewTweetToList}/>
+      <Tweets content={tweet.tweet}
+              likes={0}
+              key={index}/>
+            )}
     </div>
   );
 }
